@@ -1,14 +1,12 @@
 package main
 
-import "fmt"
-
 func main() {
 	cards := newDeck()
 
-	hand, remaingDeck := deal(cards, 5)
+	hand, remainingDeck := deal(cards, 5)
 
 	hand.print()
-	remaingDeck.print()
+	remainingDeck.print()
 
-	fmt.Println(hand.toString())
+	cards.saveToFile("cards.txt")
 }
